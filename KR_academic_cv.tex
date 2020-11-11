@@ -1,0 +1,327 @@
+\documentclass{article}
+
+\usepackage[a4paper, top= 0.6in, bottom=0.6in, left=0.5in, right=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\textheight=10in
+\pagestyle{empty}
+\usepackage{etoolbox}
+\usepackage{needspace} % http://ctan.org/pkg/needspace
+
+\raggedright
+
+% COMMANDS FOR SETTING RESUME TYPE
+
+
+\providetoggle{medium}
+%\settoggle{medium}{true}
+
+\providetoggle{long}
+%\settoggle{long}{true}
+
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+\newcommand{\header} [1] {
+	\needspace{1em}
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+ % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\iftoggle{long}{
+	\settoggle{medium}{true}
+}{}
+
+%==== Profile ====%
+\begin{center}
+	{\Huge \scshape {Kanchana Nisal Ranasinghe}}\\
+	kahnchana@gmail.com $\cdot$ +94 71 883 4877 $\cdot$ \url{linkedin.com/in/kahnchana/} $\cdot$ \url{github.com/kahnchana}\\
+\end{center}
+\vspace{4mm}
+
+%==== Education ====%
+\header{Education}
+\vspace{1mm}
+\textbf{University of Moratuwa, Sri Lanka} \hfill \textbf{CGPA: 3.95} (First Class Honours) \hfill Dec 2015 - Jan 2020\\
+B.Sc. Engineering - \textit{Awarded Most Outstanding Graduand of the Year} \hfill Dean's List: Semester 1,2,3,4,6,7,8 \\
+\vspace{1mm}
+%\iftoggle{long}{
+%	\begin{tabular}{lll}
+%		Linear Algebra (A)        & Signals and Systems (A+)    & Random Signals and Processes (A+) \\
+%		Data Structures and Algorithms (A)   & Differential Equations (A+) & Graph Theory (A+)                 \\
+%		Fundamentals of Image Processing (A+) & Applied Statistics (A+)     & Machine Vision (A+)              
+%	\end{tabular}
+%}{}
+
+\vspace{2mm}
+\textbf{Royal College, Colombo, Sri Lanka} \hfill Grad: Dec 2014\\
+GCE Advanced Level (Mathematics, Physics, Chemistry, General English)  \hfill  4As / 13th in country / z-score of 2.83\\
+(country-wide university entrance examination taken by over 100,000 students annually) \\
+\vspace{2mm}
+
+\iftoggle{long}{
+\textbf{Other Courses} \\
+Deep Learning: 5-course specialization (on Coursera) \hfill (Certificate earned - Apr 2018)\\
+Intermediate C++ (on EdX)	\hfill  (Certificate earned - Oct 2017) \\
+Machine Learning (on Coursera) 	\hfill (Certificate earned - Aug 2016) \\
+\vspace{2mm}
+}{}
+\vspace{2mm}
+
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+{\textbf{MBZUAI, Abu Dhabi, UAE} \\
+	\hspace{0mm}\textit{Research Assistant} \hfill (Nov 2020 - Present) \\	
+	\iftoggle{medium}{
+		\begin{itemize}[leftmargin=*,labelindent=5.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+			\item Working as a research assistant for the computer vision department in the university research division.
+			\item Research on Few Shot Learning with focus on leveraging self-supervised methods to improve few-shot object detection. 
+		\end{itemize}
+	}{}
+\vspace{2mm}
+
+{\textbf{VeracityAI, Colombo, Sri Lanka} \\
+\hspace{0mm}\textit{Machine Learning Engineer} \hfill (Feb 2020 - Oct 2020) \\
+\iftoggle{medium}{
+\begin{itemize}[leftmargin=*,labelindent=5.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+	\item Leading a team of 3 associate data scientists for research and development of vehicle damage detection system 
+	\item Adopting algorithms similar to Mask R-CNN, SSD and EfficientDet with use-case specific data augmentation methods, hyper-parameter tuning, and real world testing based dataset expansion
+	\item Building active learning pipeline analysing model confidence extraction methods for optimal annotation of data
+\end{itemize}
+}{}
+
+\hspace{0mm}\textit{Associate Data Scientist} \hfill (Jan 2019 - Jan 2020)\\
+\iftoggle{medium}{
+\begin{itemize}[leftmargin=*,labelindent=5.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+  \item Developing computer vision component of vehicle damage estimation system for insurance purposes: product was developed beyond MVP stage with real-world testing
+  \item Research on LIDAR based examining of buildings and structures for maintenance and insurance purposes 
+  \iftoggle{long}{
+  \item Research on state-of-the-art deep learning based instance and semantic segmentation algorithms, implementation and fine-tuning of selected methods using case-specific datasets, and analysis on most suitable approaches
+  \item Implementation of quantized neural network architectures efficient for real-time inference on edge devices 
+  }{}
+\end{itemize}
+}{}
+\vspace{2mm}
+
+\textbf{FiveAI, Cambridge, UK} \\
+\textit{Research Intern} \hfill (June 2018 - Dec 2018)\\
+\iftoggle{medium}{
+\begin{itemize}[leftmargin=*,labelindent=2.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+  \item Research on 3D orientation estimation of objects in 2D image feeds and development of a novel algorithm with superior performance deployed to autonomous vehicle software stack 
+  \item Exploring and integrating synthetic data to training datasets and verifying improvements for a range of computer vision tasks with augmented datasets
+  \item Research on neural network verification and exploration through methods like GradCam, Saliency Maps, and TCAV. 
+\end{itemize}
+}{}
+\vspace{2mm}
+
+\iftoggle{medium}{
+\textbf{Cerebrium, Moratuwa, Sri Lanka} - \textit{Researcher} \hfill (Jan 2017 - June 2018)\\
+\begin{itemize}[leftmargin=*,labelindent=2.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+  \item Developing of plant-leaf based disease detection system from multi-spectral image feeds (NIR/RGB spectra) and implementing transfer learning based training of CNNs on small datasets of domain-specific images 
+  \item Project deployed using mobile app with edge inference and recognized as a Top Initiative at National Tech Awards
+\end{itemize}
+\vspace{2mm}
+}{}
+
+\vspace{2mm}
+
+%==== Publications ====%
+\header{Publications}
+\vspace{1mm}
+S. Ramasinghe, \textbf{K Ranasinghe},  Salman Khan, Nick Barnes, and Stephen Gould, \textbf{Conditional Generative Modeling in Continuous Multimodal Spaces} (submitted for ICLR 2021) \\
+\vspace{2mm}
+S. Jayasumana, \textbf{K. Ranasinghe}, M. Jayawardhana, S. Liyanaarachchi and H. Ranasinghe, \textbf{Bipartite Conditional Random Fields for Panoptic Segmentation}, Proceedings of the British Machine Vision Conference, 2020. \\
+\vspace{2mm}
+S. Ramasinghe, J. Rajasegaran, V. Jayasundara, \textbf{K. Ranasinghe}, R. Rodrigo and A. A. Pasqual, \textbf{Combined Static and Motion Features for Deep-Networks Based Activity Recognition in Videos,} in IEEE Transactions on Circuits and Systems for Video Technology, vol. 29, no. 9, pp. 2693-2707, Sept. 2019.\\
+\vspace{2mm}
+S. Ramasinghe, J. Rajasegaran, V. Jayasundara, \textbf{K. Ranasinghe}, R. Rodrigo and A. Pasqual, \textbf{Micro Actions and Deep Static Features for Activity Recognition}, 2017 International Conference on Digital Image Computing: Techniques and Applications (DICTA), Sydney, Australia, 2017, pp. 1-8. \\
+\vspace{2mm}
+\textbf{K. Ranasinghe}, M. Jayawardhana, S. Liyanaarachchi and H. Ranasinghe, \textbf{Extending Multi-Object Tracking systems to better exploit appearance and 3D information},  2019 arxiv preprint. \\
+\vspace{2mm}
+\vspace{2mm}
+
+\iftoggle{medium}{
+\header{Research Projects}
+\vspace{1mm}
+\textbf{Few Shot Detection} \hfill (June 2020 - Present) \\
+\begin{itemize}[leftmargin=*,labelindent=2.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+	\item Research and experimentation with state-of-the-art methods for few shot learning in the domain of object detection
+	\item Analysis on transfer learning strengths of various feature extraction architectures. 
+\end{itemize}
+\vspace{2mm}
+
+\textbf{Self Supervised Learning} \hfill (Mar 2019 - June 2020) \\
+\begin{itemize}[leftmargin=*,labelindent=2.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+	\item Research on state-of-the-art conditional generative modeling approaches, their performance in multi-modal spaces, and leveraging generative models for self-supervised learning
+	\item Experimentation with a range of state-of-the-art generative adversarial networks (GANs) on standard image datasets and evaluating performance in terms of accuracy, speed, and computational overhead
+\end{itemize}
+\vspace{2mm}
+
+\textbf{Undergraduate Research Project} \hfill (Jan 2019 - Jan 2020) \\
+\begin{itemize}[leftmargin=*,labelindent=2.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+	\item Research on combining Siamese Trackers and recurrent neural networks (LSTM) to simultaneously exploit appearance and spatial information for multi-object tracking, developing unique approach for occlusion aware object tracking, and analyzing effectiveness of BEV space projections for spatial tracking
+	\item Research on panoptic segmentation using conditional random fields, development of novel information fusion layer achieving state-of-the-art performance
+\end{itemize}
+\vspace{2mm}
+
+\iftoggle{long}{
+\textbf{Action Recognition in Videos} \hfill (July 2016 - Jan 2017) \\
+\begin{itemize}[leftmargin=*,labelindent=2.5mm,labelsep=1.3mm,topsep=0.1mm, parsep=0.1mm, itemsep=0.5mm]  %nosep
+	\item Research on optimal methods of static and motion feature fusion for deep learning based action recognition in videos
+	\item Literary review on state-of-the-art methods, research on various feature fusion techniques and analysing mathematical validity in fusing feature vectors, and implementing recurrent neural networks (LSTM) for capturing temporal variation of fused features
+\end{itemize}
+\vspace{2mm}
+}{}
+
+\vspace{2mm}
+}{}
+%\newpage
+%\vspace*{-25pt}
+
+%==== Awards ====%
+\header{Selected Awards}
+\textbf{Most Outstanding Graduand of the Year} - University of Moratuwa, Sri Lanka \hfill 2020\\
+\vspace{1mm}
+\textbf{Mahapola Merit Award} - Ranked 13th in Sri Lanka at GCE Advanced Level \hfill 2014\\
+\vspace{1mm}
+\textbf{Participation/ Ranked 296\textsuperscript{th} in world} - International Mathematical Olympiad (IMO), Columbia \hfill 2013\\
+\vspace{1mm}
+\textbf{Bronze Medalist} - International Mathematics Competition, South Korea \hfill 2010\\
+\vspace{1mm}
+\textbf{International Representation / National Champion} - IGNOU UNESCO Science Olympiad, India \hfill 2011\\
+\vspace{2mm}
+\vspace{4mm}
+
+
+%==== Professional Activities ====%
+\header{Professional Activities}
+\vspace{1mm}
+\textbf{British Machine Vision Conference} - Peer Reviewer \hfill 2020\\
+\vspace{1mm}
+\textbf{IEEE Transactions on Circuits and Systems for Video Technology} - Peer Reviewer \hfill 2017, 2018 \\
+\vspace{2mm}
+\vspace{4mm}
+
+
+%==== Skills ====%
+\iftoggle{medium}{
+\header{Skills}
+\vspace{1mm}
+\textbf{Languages}: Python (proficient), MATLAB, C++, Lua (novice) \hfill \textbf{Tools}: Tensorflow, PyTorch \\
+\textbf{Experience \& Interests}: Computer Vision, Machine Learning, Algorithms \\
+\vspace{2mm}
+\vspace{2mm}
+}{}
+
+%==== Hackathon ====%
+\iftoggle{medium}{
+\header{Hackathon Experience}
+\vspace{1mm}
+\textbf{Finalists} -  Presidential Hackathon organized by the Government of Taiwan \hfill  Taiwan, 2019  \\
+\vspace{2mm}
+\textbf{Asia-Pacific Runners-Up} -  Innovate FPGA organized by Intel and Terasic \hfill  International, 2018  \\
+\vspace{2mm}
+\textbf{Champions \& Best Data Scientist} -  Datathon organized by Axiata \hfill  Colombo, 2019  \\
+\vspace{2mm}
+\textbf{Champions} -  CodeSprint 3.0 organized by IdeaMart \& IIT \hfill  Colombo, 2018  \\
+\vspace{2mm}
+
+\iftoggle{long}{
+\textbf{Runners-Up} -  4iR Hackathon organized by SLASSCOM  \hfill  Colombo, 2018  \\
+\vspace{2mm}
+\textbf{Runners-Up} -  LetMeHack organized by Sabaragamu University  \hfill  Belihuloya, 2018  \\
+\vspace{2mm}
+\textbf{Runners-Up} -  Techno Hackathon organized by IESL \hfill  Colombo, 2017  \\
+\vspace{2mm}
+\textbf{Runners-Up} -  SLTA Hackathon organized by SLTA  \hfill  Colombo, 2017  \\
+\vspace{2mm}
+}{}
+\vspace{2mm}
+}{}
+
+
+%==== Volunteer ====%
+\header{Volunteer Experience / Leadership}
+\vspace{1mm}
+
+\textbf{Captain - University of Moratuwa Debating Team} \hfill 2016/2017 \\
+\iftoggle{long}{
+	Reviving and establishing a debating society and team at the university. Training of university debating teams comprising of around 20 debaters. Team emerged $1^{st}$ runners-up at national level inter-university tournament. \\
+}{}
+
+\iftoggle{medium}{
+\vspace{2mm}
+\textbf{President - OREPA Student Chapter} \hfill 2019 \\
+}{}
+\iftoggle{long}{
+	Leading the Student Chapter of a volunteer past-pupils association group comprising of engineers. Coordinating over 10 annual projects under 5 different avenues by leading a executive committee of 12 and a club membership exceeding 200.\\
+}{}
+\vspace{2mm}
+
+\iftoggle{medium}{
+\textbf{Secretary - Mathematics Society - University of Moratuwa} \hfill 2017/2018 \\
+\iftoggle{long}{
+	Leading the university mathematics society comprising of over 50 members in organising weekly forums, intra-campus competitions, and activities for freshers. Initiated a program to hold monthly talks by notable researchers in fields closely linked to mathematics and engineering. \\
+}{}
+\vspace{2mm}
+}{}
+
+\textbf{Executive Committee - Sri Lanka Model United Nations} \hfill 2015 \\
+\iftoggle{long}{
+President of a sub-committee.  Responsible for organising multiple awareness sessions around the country, coordinating with partners like UNPD and UNFPA, and organising an international conference (Asia's largest student led conference) with over 1000 participants. \\
+}{}
+\vspace{2mm}
+
+\textbf{President - Gavel Club of Royal College} (affiliated to Toastmasters International) \hfill 2012/2013 \\
+\iftoggle{long}{
+Responsible for leading executive committee of 7 members, and club of 60 members. Led the organising of a regional competition with over 800 high school participants. Organised multiple workshops for student skills development. \\
+}{}
+\vspace{2mm}
+
+\textbf{Community Service Director - Interact Club of Royal College} \hfill 2013/2014 \\
+\iftoggle{medium}{
+\iftoggle{long}{
+Giving leadership to a club of over 200 high school students. Organising of a wide range of community service projects targeting school students, rural regions, and selected poor families. Also led three teams that were organising large scale fund raisers: a talent show, a theatre production and a rugby tournament. \\
+}{}
+\vspace{2mm}
+
+\textbf{Player - Football Team of Royal College} \hfill 2010/2011/2012 \\
+\iftoggle{long}{
+Represented the high-school football team at multiple regional and national level tournaments. Member of the champion team at the annual Royal Thomian Football encounter in 2011. \\
+}{}
+\vspace{2mm}
+
+\textbf{Scouting - Royal College} \hfill 2009/2010/2011/2012 \\
+\iftoggle{long}{
+	Patrol Leader, Troop Leader, and Instructor (for one troop comprising of 3 patrols with 6-7 students in each patrol) for scouting at high school. Guiding and monitoring continuous development and weekly activities for all all students of the troop. Also involved in organising multiple outstation year-end camps and various scouting events at school.  \\
+}{}
+\vspace{2mm}
+
+\textbf{Cast Member - Theatre Circle of Royal College} \hfill 2012/2013 \\
+\iftoggle{long}{
+	Acting in multiple theatrical performances and public productions at high school. Emerging champions at multiple inter-school theatre contests. \\
+}{}
+\vspace{2mm}
+}{}
+
+\vspace{-40mm}
+\end{document} 
+
+
+
+
+
