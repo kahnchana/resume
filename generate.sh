@@ -10,3 +10,5 @@ if [[ ! -d "output" ]]; then
 fi
 
 mv *.pdf output/
+
+rm *.aux *.log *.out
